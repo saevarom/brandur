@@ -1,0 +1,4 @@
+SERVER_PASSWORD=''
+CHANNELS=['#cinch']
+NICK='brandur'
+SERVER='irc.freenode.net'

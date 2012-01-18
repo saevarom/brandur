@@ -1,0 +1,21 @@
+About
+=====
+
+Brandur is a simple IRC bot based on [Cinch](http://github.com/cinchrb/cinch). Right now, Brandur can do some calculations for you or lookup random images on Google.
+
+Requirements
+============
+
+You need the following gems to run Brandur
+
+* cinch
+* curb
+
+Usage
+=====
+
+Copy `constants.rb.example` to `constants.rb` and edit the necessary settings, like `SERVER` and `CHANNELS`.
+
+Then, simply run the bot:
+
+    ruby run.rb
