@@ -29,4 +29,4 @@ Go ask Brandur a question on a channel or in a private message:
     [me] brandur image pug costume
     [brandur] http://s3-ak.buzzfed.com/static/imagebuzz/web03/2010/10/13/15/teen-wolf-pug-costume-22885-1286999339-38.jpg
     
-    ![Hilarious image of a dog](http://s3-ak.buzzfed.com/static/imagebuzz/web03/2010/10/13/15/teen-wolf-pug-costume-22885-1286999339-38.jpg)
+![Hilarious image of a dog](http://s3-ak.buzzfed.com/static/imagebuzz/web03/2010/10/13/15/teen-wolf-pug-costume-22885-1286999339-38.jpg)
