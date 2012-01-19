@@ -30,3 +30,27 @@ Go ask Brandur a question on a channel or in a private message:
     [brandur] http://s3-ak.buzzfed.com/static/imagebuzz/web03/2010/10/13/15/teen-wolf-pug-costume-22885-1286999339-38.jpg
     
 ![Hilarious image of a dog](http://s3-ak.buzzfed.com/static/imagebuzz/web03/2010/10/13/15/teen-wolf-pug-costume-22885-1286999339-38.jpg)
+
+Queries
+=========
+
+Queries are usually of the form `brandur <command> <query>`.
+
+Image Search
+-------------
+
+`<command>` can be
+* img
+* image
+
+Google calculator
+-------------------
+
+`<command>` can be
+* calc
+* calculate
+* convert
+* math
+* reiknaðu (Icelandic for __do math__)
+
+
