@@ -40,6 +40,7 @@ Image Search
 -------------
 
 `<command>` can be
+
 * img
 * image
 
@@ -47,6 +48,7 @@ Google calculator
 -------------------
 
 `<command>` can be
+
 * calc
 * calculate
 * convert
