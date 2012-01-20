@@ -2,6 +2,7 @@ require 'cinch'
 require './plugins/imagesearch'
 require './plugins/math'
 require './plugins/chucknorris'
+require './plugins/seen'
 require './constants'
 
 Brandur = Cinch::Bot.new do
@@ -10,7 +11,7 @@ Brandur = Cinch::Bot.new do
     c.channels = CHANNELS
     c.password = SERVER_PASSWORD or ''
     c.nick = NICK or 'brandur'
-    c.plugins.plugins = [Plugins::ImageSearch, Plugins::Math, Plugins::ChuckNorris]
+    c.plugins.plugins = [Plugins::ImageSearch, Plugins::Math, Plugins::ChuckNorris, Plugins::Seen]
     c.plugins.prefix = "#{c.nick} "
   end
   
