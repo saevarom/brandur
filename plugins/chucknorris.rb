@@ -7,7 +7,7 @@ module Plugins
     
     JokeUrl = "http://api.icndb.com/jokes/random"
 
-    timer 15*30, method: :timed
+    timer 45*60, method: :timed
     def timed
       call = Curl::Easy.perform(JokeUrl)
       json = JSON.parse call.body_str
