@@ -1,11 +1,12 @@
 require 'cinch'
+require 'sinatra'
 require './plugins/imagesearch'
 require './plugins/math'
 require './plugins/chucknorris'
 require './plugins/seen'
 require './plugins/codeshortcuts'
+require './plugins/listen_and_post'
 require './constants'
-
 
 Brandur = Cinch::Bot.new do
   configure do |c|
@@ -13,7 +14,7 @@ Brandur = Cinch::Bot.new do
     c.channels = CHANNELS
     c.password = SERVER_PASSWORD or ''
     c.nick = NICK or 'brandur'
-    c.plugins.plugins = [Plugins::ImageSearch, Plugins::Math, Plugins::ChuckNorris, Plugins::Seen, Plugins::CodeShortcuts]
+    c.plugins.plugins = [Plugins::ImageSearch, Plugins::Math, Plugins::ChuckNorris, Plugins::Seen, Plugins::CodeShortcuts,Plugins::ListenAndPost]
     c.plugins.prefix = "#{c.nick} "
   end
   
@@ -22,7 +23,18 @@ Brandur = Cinch::Bot.new do
       m.channel.send "I'm back guys."
     end
   end
-  
+
+
+    def self.say(msg)
+      CHANNELS.each do |c|      
+        Brandur.Channel(c).send msg
+      end
+    end
+
+
+
 end
 
-Brandur.start
+Thread.new do
+  Brandur.start
+end
