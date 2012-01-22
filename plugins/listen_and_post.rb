@@ -15,7 +15,6 @@ module Plugins
       set :port, PORT
       set :logging, false
       set :lock, true
-      puts 'Setup web server'
     end
 
     configure do
