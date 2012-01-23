@@ -9,7 +9,8 @@ module Plugins
     # Listens for a ticket number reference and provides the link to codebase.
     def listen(m)
       if /#([0-9]*)/.match(m.message)
-        m.reply "https://transmit.codebasehq.com/projects/brand-regard/tickets/" + /#([0-9]*)/.match(m.message)[1]
+        ticket =  /#([0-9]*)/.match(m.message)[1]
+        m.reply "Did someone mention ticket ##{ticket}? Here's a link: " + "https://transmit.codebasehq.com/projects/brand-regard/tickets/" + ticket
       end
     end
     
