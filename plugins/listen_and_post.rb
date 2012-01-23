@@ -15,7 +15,6 @@ module Plugins
       set :port, PORT
       set :logging, false
       set :lock, true
-      puts 'Setup web server'
     end
 
     configure do
@@ -31,6 +30,19 @@ module Plugins
 
     post "/say" do
       Brandur.say params[:message]
+    end
+
+    post "/codebase" do
+      update = JSON.parse(params[:payload])
+      if update["ticket"].nil?
+        Brandur.say "New ticket! #{update["summary"]}"
+        Brandur.say "Here's the link: #{update["url"]}"
+      else
+        summary = update["ticket"]["summary"]
+        url =  update["ticket"]["url"]
+        Brandur.say "Ticket ##{update["ticket"]["id"]} was updated (#{summary})"
+        Brandur.say "Here's the link: #{url}"
+     end
     end
 
     post "/github" do
