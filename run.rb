@@ -8,7 +8,9 @@ require './plugins/sensitive'
 require './plugins/urban'
 require './plugins/foos'
 require './plugins/polite'
+require './plugins/codeshortcuts'
 require './constants'
+
 
 Brandur = Cinch::Bot.new do
   configure do |c|
@@ -26,8 +28,9 @@ Brandur = Cinch::Bot.new do
       Plugins::Urban,
       Plugins::Foos,
       Plugins::Polite,
+      Plugins::CodeShortcuts,
     ]
-    c.plugins.prefix = "brandur "
+    c.plugins.prefix = "#{c.nick} "
   end
   
   on :join do |m|
