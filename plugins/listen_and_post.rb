@@ -4,7 +4,7 @@ require "yaml"
 require "json"
 
 HOST = '0.0.0.0'
-PORT = 8888
+PORT = 8887
 
 module Plugins
   class ListenAndPost
@@ -15,6 +15,7 @@ module Plugins
       set :port, PORT
       set :logging, false
       set :lock, true
+      puts 'Setup web server'
     end
 
     configure do
@@ -28,11 +29,14 @@ module Plugins
       "Brandur lives here. Direct your hooks to /github."
     end
 
+    post "/say" do
+      Brandur.say params[:message]
+    end
+
     post "/github" do
       push = JSON.parse(params[:payload])
       repo = push["repository"]["name"]
       branch = push["ref"].gsub(/^refs\/heads\//,"")
-
 
       # sort commits by timestamp
       push["commits"].sort! do |a,b|
@@ -65,3 +69,4 @@ module Plugins
     end   
   end
 end
+
