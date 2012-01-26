@@ -6,7 +6,7 @@ module Plugins
   class Urban
     include Cinch::Plugin
     
-    match /^(urban|what is(?: a(?:n)?)?|define) (.+)/i, use_prefix: false
+    match /^(who is|urban|what is(?: a(?:n)?)?|define) (.+)/i, use_prefix: false
     
     UrbanUrl = "http://www.urbandictionary.com/define.php?term=%s"
     
