@@ -11,6 +11,7 @@ require './plugins/foos'
 require './plugins/polite'
 require './plugins/codeshortcuts'
 require './plugins/listen_and_post'
+require './plugins/meme_generator'
 require './constants'
 
 Brandur = Cinch::Bot.new do
@@ -30,6 +31,7 @@ Brandur = Cinch::Bot.new do
       Plugins::Foos,
       Plugins::Polite,
       Plugins::CodeShortcuts,
+      Plugins::MemeGenerator,
       Plugins::ListenAndPost
     ]
     c.plugins.prefix = "#{c.nick} "
